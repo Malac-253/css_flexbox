@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #cacaca;
+    padding: 10px;
+    margin: 50px;
+    height: 2000px;
+
+    /* 
+    sets up flex box 
+    */
+    display: flex;
+    /* 
+    direction adjust the direction of the fix
+        ex: row , column OR column-reverse
+        Main-axis and Cross axis
+    */
+    flex-direction: column;
+
+    /* 
+    alings the flex box items refering to x axis
+    -Main-axis
+        ex: center, space-between,space-around,
+        space-evenly, flex-start, flex-end
+    */
+    justify-content: space-between;
+
+    /*
+    alings the flex box items refering to y axis
+    -Cross axis
+        ex: center, space-between,space-around,
+        space-evenly, flex-start, flex-end, baseline
+    */
+    align-items: center;
+
+}
+
+.item {
+    background-color: #ff0037;
+    color: #fff;
+    font-size: 35px;
+    padding: 20px;
+    margin: 10px;
+    height: 60px;
+}
+
+.items-3{
+    height: 150px;
+}
+
+.items-4{
+    font-size: 70px;
+}
