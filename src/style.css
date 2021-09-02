@@ -8,7 +8,7 @@
     background-color: #cacaca;
     padding: 10px;
     margin: 50px;
-    height: 2000px;
+    height: 600px;
 
     /* 
     sets up flex box 
@@ -19,23 +19,40 @@
         ex: row , column OR column-reverse
         Main-axis and Cross axis
     */
-    flex-direction: column;
+    flex-direction: row;
 
     /* 
-    alings the flex box items refering to x axis
+    aligns the flex box items refering to x axis
     -Main-axis
         ex: center, space-between,space-around,
         space-evenly, flex-start, flex-end
     */
-    justify-content: space-between;
+    justify-content: center;
 
     /*
-    alings the flex box items refering to y axis
+    aligns the flex box items refering to y axis, 
+    using the local axis
     -Cross axis
         ex: center, space-between,space-around,
         space-evenly, flex-start, flex-end, baseline
     */
-    align-items: center;
+    align-items: flex-end;
+    
+    /*
+    Will warp items to prevent overflow
+    */
+    flex-wrap: wrap;
+
+    /*
+    aligns the row of items in the contianer ... the content
+    using the public axis
+    -Cross axis
+        ex: center, space-between,space-around,
+        space-evenly, flex-start, flex-end, baseline
+    */
+    align-content: flex-start;
+
+    overflow: auto;
 
 }
 
@@ -46,12 +63,42 @@
     padding: 20px;
     margin: 10px;
     height: 60px;
+    flex-grow: 1;
 }
 
+.items-1{
+    height: 150px;
+    order: 3;
+}
+.items-2{
+    height: 150px;
+    order: 2;
+}
 .items-3{
     height: 150px;
+    order: 5;
+    /*
+    - 'Flex grow' will expand the item in relation to the others
+    - 'Flex basis' will expand the item based in a precent in
+        container
+    - 'flex-shrink' is either 1 or 0, and will either allow shrinks or not
+     */
+    flex-basis: 600px;
+    flex-shrink: 1;
+    
 }
 
 .items-4{
-    font-size: 70px;
+    font-size: 40px;
+    /*
+    align an item in the flexbox for itself,
+    takes self  
+        ex: center, space-between,space-around,
+        space-evenly, flex-start, flex-end, baseline,
+        stretch
+    */
+    align-self: space-evenly;
+}
+.items-5{
+    height: 150px;
 }
